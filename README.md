@@ -1,24 +1,77 @@
-# README
+## Setting up
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby Version: 2.5.7
 
-Things you may want to cover:
+Rails Version: 6.1.3.1
 
-* Ruby version
+---
+Clone repo:
+```
+git clone git@github.com:hdpuk86/how_hot.git
+```
 
-* System dependencies
+Install Ruby gems:
+```
+bundle install
+```
 
-* Configuration
+Install Javascript packages:
+```
+yarn install
+```
 
-* Database creation
+Create the databases:
+```
+rails db:create
+```
 
-* Database initialization
+Run the database migrations:
+```
+rails db:migrate
+```
 
-* How to run the test suite
+It's important to also run the seeds:
+```
+rails db:seed
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Running tests with MiniTest
 
-* Deployment instructions
+Run all tests:
+```
+rails test
+```
 
-* ...
+Run a specific test file:
+```
+rails test test/controllers/heatometer_controller_test.rb
+```
+
+Run a specific test:
+```
+rails test test/controllers/heatometer_controller_test.rb:4
+```
+
+Start server, application should run on `localhost:3000`
+```
+rails server
+```
+
+---
+
+## The App
+
+The app should open on a page with 2 links:
+
+'Manage heat ratings' - where you can define the thresholds for the heat ratings
+
+'Get a forecast' - where you can lookup a forecast using a postcode
+
+After creating a forecast the app will redirect you back to the main page and you should see your ratings.
+
+## Improvements Needed
+
+- Validation to check a user has entered a valid UK postcode format
+- Validation for to ensure API responses are for UK postcodes
+- More testing required
+- Need to install and run a linter - Rubocop
