@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 2021_04_07_114022) do
   create_table "heatometers", force: :cascade do |t|
     t.integer "max_cold"
     t.integer "min_hot"
-    t.string "postcode"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
