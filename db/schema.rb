@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_07_114022) do
+ActiveRecord::Schema.define(version: 2021_04_07_154808) do
 
   create_table "heatometers", force: :cascade do |t|
     t.integer "max_cold"
@@ -19,4 +19,14 @@ ActiveRecord::Schema.define(version: 2021_04_07_114022) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "temperature_ratings", force: :cascade do |t|
+    t.integer "heatometer_id", null: false
+    t.string "postcode"
+    t.string "rating"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["heatometer_id"], name: "index_temperature_ratings_on_heatometer_id"
+  end
+
+  add_foreign_key "temperature_ratings", "heatometers"
 end

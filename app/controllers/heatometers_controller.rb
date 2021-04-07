@@ -5,6 +5,7 @@ class HeatometersController < ApplicationController
   end
 
   def update
+    # ToDo
   end
 
   private

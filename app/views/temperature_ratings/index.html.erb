@@ -1,0 +1,29 @@
+<h1>How Hot Is It?</h1>
+
+<div>
+  <%= link_to 'Manage heat ratings', edit_heatometer_url(Heatometer.first) %>
+</div>
+
+<div>
+  <%= link_to 'Get a forecast', new_temperature_rating_url %>
+</div>
+
+<% if @temperature_ratings.present? %>
+  <table>
+    <thead>
+      <tr>
+        <th>Postcode</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @temperature_ratings.each do |temperature_rating| %>
+        <tr>
+          <td><%= temperature_rating.postcode %></td>
+          <td><%= temperature_rating.rating %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
