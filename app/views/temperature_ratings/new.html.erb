@@ -1,7 +1,13 @@
+<% if @temperature_rating.errors.present? %>
+  <% @temperature_rating.errors.full_messages.each do |error| %>
+    <P><%= error %></P>
+  <% end %>
+<% end %>
+
 <%= form_with(model: @temperature_rating) do |form| %>
   <div>
     <%= form.label :postcode %>
-    <%= form.text_field :postcode %>
+    <%= form.text_field :postcode, required: true %>
   </div>
 
   <%= form.submit %>

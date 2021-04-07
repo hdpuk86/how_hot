@@ -1,7 +1,4 @@
 class WeatherForecastService
-  # ToDo postcode validation
-  # ToDo country validation
-
   def self.weather_for_area(postcode)
     response = HTTParty.get('http://api.weatherapi.com/v1/forecast.json', {
       query: {
