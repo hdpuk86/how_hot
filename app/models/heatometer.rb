@@ -1,0 +1,2 @@
+class Heatometer < ApplicationRecord
+end
