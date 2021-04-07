@@ -29,4 +29,9 @@ class HeatometerTest < ActiveSupport::TestCase
     temperature = @heatometer.max_cold - 1
     assert_equal "cold", @heatometer.how_hot(temperature)
   end
+
+  def test_how_hot_returns_empty_string_when_temperature_is_nil
+    temperature = nil
+    assert_equal "", @heatometer.how_hot(temperature)
+  end
 end
