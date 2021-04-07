@@ -1,0 +1,20 @@
+<%= form_with model: @heatometer do |form| %>
+  <p>Anything between the hot and cold temperatures is considered warm</p>
+
+  <div>
+    <%= form.label 'Minimum temperature for hot (°c)' %>
+    <%= form.number_field :min_hot %>
+  </div>
+
+  <div>
+    <%= form.label 'Maximum temperature for cold (°c)' %>
+    <%= form.number_field :max_cold %>
+  </div>
+
+  <div>
+    <%= form.label :postcode %>
+    <%= form.text_field :postcode %>
+  </div>
+
+  <%= form.submit %>
+<% end %>

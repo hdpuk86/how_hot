@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  max_cold: 10
+  min_hot: 20
+  postcode: w1a1aa
+
+two:
+  max_cold: 5
+  min_hot: 25
+  postcode: l2b3bb
