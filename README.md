@@ -35,6 +35,11 @@ It's important to also run the seeds:
 rails db:seed
 ```
 
+Start server, application should run on `localhost:3000`:
+```
+rails server
+```
+
 ## Running tests with MiniTest
 
 Run all tests:
@@ -50,11 +55,6 @@ rails test test/controllers/heatometer_controller_test.rb
 Run a specific test:
 ```
 rails test test/controllers/heatometer_controller_test.rb:4
-```
-
-Start server, application should run on `localhost:3000`
-```
-rails server
 ```
 
 ---
